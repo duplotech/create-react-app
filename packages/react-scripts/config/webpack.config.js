@@ -674,7 +674,12 @@ module.exports = function(webpackEnv) {
         new WorkboxWebpackPlugin.GenerateSW({
           clientsClaim: true,
           exclude: [/\.map$/, /asset-manifest\.json$/],
-          importWorkboxFrom: 'cdn',
+          // A number of `workbox-build`, `workbox-cli`, and `workbox-webpack-plugin` configuration parameters are no longer supported,
+          // following the general outlines of the changes described above.
+          // For instance, generateSW will always create a local Workbox runtime bundle for you, so the importWorkboxFrom option no longer
+          // makes sense. Please consult the relevant tool's documentation for the list of supported options.
+          // See: https://github.com/GoogleChrome/workbox/releases/tag/v5.0.0
+          // importWorkboxFrom: 'cdn',
           navigateFallback: paths.publicUrlOrPath + 'index.html',
           navigateFallbackDenylist: [
             // Exclude URLs starting with /_, as they're likely an API call
