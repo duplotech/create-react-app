@@ -81,7 +81,7 @@
     "url-loader": "4.0.0",
     "webpack": "5.0.0-beta.14",
     "webpack-dev-server": "3.10.3",
-    "webpack-manifest-plugin": "2.2.0",
+    "webpack-manifest-plugin": "3.0.0-rc.0",
     "workbox-webpack-plugin": "5.1.1"
   },
   "devDependencies": {
