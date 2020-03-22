@@ -100,8 +100,13 @@ class ModuleNotFoundPlugin {
     const { prettierError } = this;
     compiler.hooks.make.intercept({
       register(tap) {
+        // Webpack 5 Change: DeprecationWarning: SingleEntryPlugin was renamed to EntryPlugin.
         if (
-          !(tap.name === 'MultiEntryPlugin' || tap.name === 'SingleEntryPlugin')
+          !(
+            tap.name === 'MultiEntryPlugin' ||
+            tap.name === 'SingleEntryPlugin' ||
+            tap.name === 'EntryPlugin'
+          )
         ) {
           return tap;
         }
