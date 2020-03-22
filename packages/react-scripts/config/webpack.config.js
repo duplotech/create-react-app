@@ -170,7 +170,10 @@ module.exports = function(webpackEnv) {
     ].filter(Boolean),
     output: {
       // The build folder.
-      path: isEnvProduction ? paths.appBuild : undefined,
+      // Webpack 5 Change: We will never let this be set to `undefined`.
+      // TODO: Find out why this was previously conditional.
+      // See https://github.com/webpack/changelog-v5/blob/master/MIGRATION%20GUIDE.md#cleanup-configuration
+      path: paths.appBuild,
       // Add /* filename */ comments to generated require()s in the output.
       pathinfo: isEnvDevelopment,
       // There will be one main bundle, and one file per asynchronous chunk.
