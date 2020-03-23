@@ -276,6 +276,7 @@ yarn start --smoke-test
 # ******************************************************************************
 # Test when PnP is enabled
 # ******************************************************************************
+
 cd "$temp_app_path"
 npx create-react-app test-app-pnp --use-pnp
 cd test-app-pnp
