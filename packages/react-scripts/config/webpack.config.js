@@ -343,7 +343,11 @@ module.exports = function(webpackEnv) {
       strictExportPresence: true,
       rules: [
         // Disable require.ensure as it's not a standard language feature.
-        { parser: { requireEnsure: false } },
+        // Webpack 5 Change: We had to add a type to continue to remove requireEnsure since otherwise it thinks the Rule.type is json.
+        // This might be a Webpack 5 bug.
+        // See https://github.com/smelukov/webpack.js.org/blob/ceba5c77f7964e7982a1b666905924d89e4a2d4c/src/content/configuration/module.mdx#ruleparserparse
+        // See https://github.com/webpack/webpack/pull/10054
+        { type: 'javascript/auto', parser: { requireEnsure: false } },
 
         // First, run the linter.
         // It's important to do this before Babel processes the JS.
