@@ -569,6 +569,9 @@ module.exports = function(webpackEnv) {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },
+            // Webpack 5 Change: For some reason the default json-loader wasn't being used.
+            // This might be due to the type property I had to add to the first `parser.requireEnsure` rule?
+            { test: /\.json$/, loader: require.resolve('json-loader') },
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
           ],
