@@ -68,6 +68,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser.js',
+    }),
     new webpack.DefinePlugin({
       // We set process.env.NODE_ENV to 'production' so that React is built
       // in production mode.
@@ -77,4 +80,11 @@ module.exports = {
     }),
   ],
   performance: false,
+  resolve: {
+    alias: {
+      // Webpack 5 Change: Do not polyfill node bindings by default.
+      // See https://github.com/webpack/webpack/pull/8460
+      process: 'process',
+    },
+  },
 };
