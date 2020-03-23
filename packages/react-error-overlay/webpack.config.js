@@ -38,10 +38,12 @@ module.exports = {
   optimization: {
     nodeEnv: false,
   },
-  node: {
-    fs: 'empty',
-    process: false,
-  },
+  // Webpack 5 Change: Do not polyfill node bindings by default.
+  // See https://github.com/webpack/webpack/pull/8460
+  // node: {
+  //   fs: 'empty',
+  //   process: false,
+  // },
   performance: {
     hints: false,
   },
