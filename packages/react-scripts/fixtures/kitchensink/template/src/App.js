@@ -156,16 +156,16 @@ class App extends Component {
           this.setFeature(f.default)
         );
         break;
-      case 'json-inclusion':
-        import('./features/webpack/JsonInclusion').then(f =>
-          this.setFeature(f.default)
-        );
-        break;
-      case 'linked-modules':
-        import('./features/webpack/LinkedModules').then(f =>
-          this.setFeature(f.default)
-        );
-        break;
+      // case 'json-inclusion':
+      //   import('./features/webpack/JsonInclusion').then(f =>
+      //     this.setFeature(f.default)
+      //   );
+      //   break;
+      // case 'linked-modules':
+      //   import('./features/webpack/LinkedModules').then(f =>
+      //     this.setFeature(f.default)
+      //   );
+      //   break;
       case 'no-ext-inclusion':
         import('./features/webpack/NoExtInclusion').then(f =>
           this.setFeature(f.default)
@@ -221,11 +221,11 @@ class App extends Component {
           this.setFeature(f.default)
         );
         break;
-      case 'svg-component':
-        import('./features/webpack/SvgComponent').then(f =>
-          this.setFeature(f.default)
-        );
-        break;
+      // case 'svg-component':
+      //   import('./features/webpack/SvgComponent').then(f =>
+      //     this.setFeature(f.default)
+      //   );
+      //   break;
       case 'svg-in-css':
         import('./features/webpack/SvgInCss').then(f =>
           this.setFeature(f.default)
