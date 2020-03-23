@@ -180,7 +180,9 @@ module.exports = function(webpackEnv) {
       // In development, it does not produce real files.
       filename: isEnvProduction
         ? 'static/js/[name].[contenthash:8].js'
-        : isEnvDevelopment && 'static/js/bundle.js',
+        : // error Error: Conflict: Multiple chunks emit assets to the same filename static/js/bundle.js
+          // (chunks main and vendors-node_modules_chalk_index_js-node_modules_css-loader_dist_runtime_api_js-node_modules_-5ede04)
+          isEnvDevelopment && 'static/js/[name].js',
       // Webpack 5 Change: removal of `futureEmitAssets` which is the default in Webpack 5.
       // See https://github.com/facebook/create-react-app/pull/6696#issue-263094759
       // futureEmitAssets: true,
