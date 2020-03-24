@@ -55,7 +55,7 @@ const packageJson = require('./package.json');
 
 let projectName;
 
-const program = new commander.Command(packageJson.name)
+const program = new commander.Command('create-react-app')
   .version(packageJson.version)
   .arguments('<project-directory>')
   .usage(`${chalk.green('<project-directory>')} [options]`)
