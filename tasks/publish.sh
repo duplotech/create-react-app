@@ -31,8 +31,10 @@ root_path=$PWD
 # fi
 
 if [ -n "$(git status --porcelain)" ]; then
-  echo "Your git status is not clean. Aborting.";
-  exit 1;
+  # echo "Your git status is not clean. Aborting.";
+  # exit 1;
+  echo "Your git status is not clean. Throwing away changes."
+  git reset --hard
 fi
 
 # Compile
