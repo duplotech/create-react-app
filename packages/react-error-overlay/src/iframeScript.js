@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import 'react-app-polyfill/ie9';
+import '@duplotech/react-app-polyfill/ie9';
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import CompileErrorContainer from './containers/CompileErrorContainer';

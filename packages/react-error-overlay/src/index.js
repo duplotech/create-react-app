@@ -187,7 +187,7 @@ window.__REACT_ERROR_OVERLAY_GLOBAL_HOOK__.iframeReady = function iframeReady() 
 
 if (process.env.NODE_ENV === 'production') {
   console.warn(
-    'react-error-overlay is not meant for use in production. You should ' +
+    '@duplotech/react-error-overlay is not meant for use in production. You should ' +
       'ensure it is not included in your build to reduce bundle size.'
   );
 }

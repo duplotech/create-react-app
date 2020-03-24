@@ -1,15 +1,15 @@
 {
-  "name": "react-dev-utils",
+  "name": "@duplotech/react-dev-utils",
   "version": "10.2.1",
   "description": "webpack utilities used by Create React App",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/duplotech/create-react-app.git",
     "directory": "packages/react-dev-utils"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/duplotech/create-react-app/issues"
   },
   "engines": {
     "node": ">=8.10"
@@ -71,7 +71,7 @@
     "loader-utils": "2.0.0",
     "open": "^7.0.2",
     "pkg-up": "3.1.0",
-    "react-error-overlay": "^6.0.7",
+    "@duplotech/react-error-overlay": "^6.0.7",
     "recursive-readdir": "2.2.2",
     "shell-quote": "1.7.2",
     "strip-ansi": "6.0.0",

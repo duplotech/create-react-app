@@ -8,7 +8,7 @@
 'use strict';
 
 const fs = require('fs');
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@duplotech/react-dev-utils/chalk');
 const paths = require('../../config/paths');
 const modules = require('../../config/modules');
 
@@ -29,8 +29,8 @@ module.exports = (resolve, rootDir, isEjecting) => {
 
     setupFiles: [
       isEjecting
-        ? 'react-app-polyfill/jsdom'
-        : require.resolve('react-app-polyfill/jsdom'),
+        ? '@duplotech/react-app-polyfill/jsdom'
+        : require.resolve('@duplotech/react-app-polyfill/jsdom'),
     ],
 
     setupFilesAfterEnv: setupTestsFile ? [setupTestsFile] : [],

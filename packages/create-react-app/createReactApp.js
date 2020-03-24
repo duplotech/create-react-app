@@ -9,21 +9,21 @@
 //   /!\ DO NOT MODIFY THIS FILE /!\
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// create-react-app is installed globally on people's computers. This means
+// @duplotech/create-react-app is installed globally on people's computers. This means
 // that it is extremely difficult to have them upgrade the version and
 // because there's only one global version installed, it is very prone to
 // breaking changes.
 //
-// The only job of create-react-app is to init the repository and then
-// forward all the commands to the local version of create-react-app.
+// The only job of @duplotech/create-react-app is to init the repository and then
+// forward all the commands to the local version of @duplotech/create-react-app.
 //
 // If you need to add a new command, please add it to the scripts/ folder.
 //
 // The only reason to modify this file is to add more warnings and
-// troubleshooting information for the `create-react-app` command.
+// troubleshooting information for the `@duplotech/create-react-app` command.
 //
 // Do not make breaking changes! We absolutely don't want to have to
-// tell people to update their global version of create-react-app.
+// tell people to update their global version of @duplotech/create-react-app.
 //
 // Also be careful with new language features.
 // This file must work on Node 6+.
@@ -66,7 +66,7 @@ const program = new commander.Command(packageJson.name)
   .option('--info', 'print environment debug info')
   .option(
     '--scripts-version <alternative-package>',
-    'use a non-standard version of react-scripts'
+    'use a non-standard version of @duplotech/react-scripts'
   )
   .option(
     '--template <path-to-template>',
@@ -77,7 +77,7 @@ const program = new commander.Command(packageJson.name)
   // TODO: Remove this in next major release.
   .option(
     '--typescript',
-    '(this option will be removed in favour of templates in the next major release of create-react-app)'
+    '(this option will be removed in favour of templates in the next major release of @duplotech/create-react-app)'
   )
   .allowUnknownOption()
   .on('--help', () => {
@@ -115,7 +115,7 @@ const program = new commander.Command(packageJson.name)
     console.log(`    A custom ${chalk.cyan('--template')} can be one of:`);
     console.log(
       `      - a custom fork published on npm: ${chalk.green(
-        'cra-template-typescript'
+        '@duplotech/cra-template-typescript'
       )}`
     );
     console.log(
@@ -139,7 +139,7 @@ const program = new commander.Command(packageJson.name)
     );
     console.log(
       `      ${chalk.cyan(
-        'https://github.com/facebook/create-react-app/issues/new'
+        'https://github.com/duplotech/create-react-app/issues/new'
       )}`
     );
     console.log();
@@ -158,8 +158,8 @@ if (program.info) {
         System: ['OS', 'CPU'],
         Binaries: ['Node', 'npm', 'Yarn'],
         Browsers: ['Chrome', 'Edge', 'Internet Explorer', 'Firefox', 'Safari'],
-        npmPackages: ['react', 'react-dom', 'react-scripts'],
-        npmGlobalPackages: ['create-react-app'],
+        npmPackages: ['react', 'react-dom', '@duplotech/react-scripts'],
+        npmGlobalPackages: ['@duplotech/create-react-app'],
       },
       {
         duplicates: true,
@@ -440,7 +440,7 @@ function run(
           packageVersion = templatesVersionMinimum;
         }
 
-        // Only support templates when used alongside new react-scripts versions.
+        // Only support templates when used alongside new @duplotech/react-scripts versions.
         const supportsTemplates = semver.gte(
           packageVersion,
           templatesVersionMinimum
@@ -451,7 +451,9 @@ function run(
           console.log('');
           console.log(
             `The ${chalk.cyan(packageInfo.name)} version you're using ${
-              packageInfo.name === 'react-scripts' ? 'is not' : 'may not be'
+              packageInfo.name === '@duplotech/react-scripts'
+                ? 'is not'
+                : 'may not be'
             } compatible with the ${chalk.cyan('--template')} option.`
           );
           console.log('');
@@ -568,7 +570,7 @@ function run(
 }
 
 function getInstallPackage(version, originalDirectory) {
-  let packageToInstall = 'react-scripts';
+  let packageToInstall = '@duplotech/react-scripts';
   const validSemver = semver.valid(version);
   if (validSemver) {
     packageToInstall += `@${validSemver}`;
@@ -620,7 +622,7 @@ function getInstallPackage(version, originalDirectory) {
 }
 
 function getTemplateInstallPackage(template, originalDirectory) {
-  let templateToInstall = 'cra-template';
+  let templateToInstall = '@duplotech/cra-template';
   if (template) {
     if (template.match(/^file:/)) {
       templateToInstall = `file:${path.resolve(
@@ -634,7 +636,7 @@ function getTemplateInstallPackage(template, originalDirectory) {
       // for tar.gz or alternative paths
       templateToInstall = template;
     } else {
-      // Add prefix 'cra-template-' to non-prefixed templates, leaving any
+      // Add prefix '@duplotech/cra-template-' to non-prefixed templates, leaving any
       // @scope/ intact.
       const packageMatch = template.match(/^(@[^/]+\/)?(.+)$/);
       const scope = packageMatch[1] || '';
@@ -645,16 +647,16 @@ function getTemplateInstallPackage(template, originalDirectory) {
         templateName.startsWith(`${templateToInstall}-`)
       ) {
         // Covers:
-        // - cra-template
+        // - @duplotech/cra-template
         // - @SCOPE/cra-template
-        // - cra-template-NAME
+        // - @duplotech/cra-template-NAME
         // - @SCOPE/cra-template-NAME
         templateToInstall = `${scope}${templateName}`;
       } else if (templateName.startsWith('@')) {
         // Covers using @SCOPE only
         templateToInstall = `${templateName}/${templateToInstall}`;
       } else {
-        // Covers templates without the `cra-template` prefix:
+        // Covers templates without the `@duplotech/cra-template` prefix:
         // - NAME
         // - @SCOPE/NAME
         templateToInstall = `${scope}${templateToInstall}-${templateName}`;
@@ -862,7 +864,11 @@ function checkAppName(appName) {
   }
 
   // TODO: there should be a single place that holds the dependencies
-  const dependencies = ['react', 'react-dom', 'react-scripts'].sort();
+  const dependencies = [
+    'react',
+    'react-dom',
+    '@duplotech/react-scripts',
+  ].sort();
   if (dependencies.includes(appName)) {
     console.error(
       chalk.red(

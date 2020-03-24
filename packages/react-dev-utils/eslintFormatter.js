@@ -78,7 +78,7 @@ function formatter(results) {
 
   if (reportContainsErrorRuleIDs) {
     // Unlike with warnings, we have to do it here.
-    // We have similar code in react-scripts for warnings,
+    // We have similar code in @duplotech/react-scripts for warnings,
     // but warnings can appear in multiple files so we only
     // print it once at the end. For errors, however, we print
     // it here because we always show at most one error, and

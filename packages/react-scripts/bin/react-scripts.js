@@ -15,7 +15,7 @@ process.on('unhandledRejection', err => {
   throw err;
 });
 
-const spawn = require('react-dev-utils/crossSpawn');
+const spawn = require('@duplotech/react-dev-utils/crossSpawn');
 const args = process.argv.slice(2);
 
 const scriptIndex = args.findIndex(
@@ -51,7 +51,7 @@ if (['build', 'eject', 'start', 'test'].includes(script)) {
   process.exit(result.status);
 } else {
   console.log('Unknown script "' + script + '".');
-  console.log('Perhaps you need to update react-scripts?');
+  console.log('Perhaps you need to update @duplotech/react-scripts?');
   console.log(
     'See: https://facebook.github.io/create-react-app/docs/updating-to-new-releases'
   );

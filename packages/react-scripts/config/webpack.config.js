@@ -15,25 +15,25 @@ const resolve = require('resolve');
 // const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const InlineChunkHtmlPlugin = require('@duplotech/react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const safePostCssParser = require('postcss-safe-parser');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const InterpolateHtmlPlugin = require('@duplotech/react-dev-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const WatchMissingNodeModulesPlugin = require('@duplotech/react-dev-utils/WatchMissingNodeModulesPlugin');
+const ModuleScopePlugin = require('@duplotech/react-dev-utils/ModuleScopePlugin');
+const getCSSModuleLocalIdent = require('@duplotech/react-dev-utils/getCSSModuleLocalIdent');
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
-const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
-const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const ModuleNotFoundPlugin = require('@duplotech/react-dev-utils/ModuleNotFoundPlugin');
+const ForkTsCheckerWebpackPlugin = require('@duplotech/react-dev-utils/ForkTsCheckerWebpackPlugin');
+const typescriptFormatter = require('@duplotech/react-dev-utils/typescriptFormatter');
 // @remove-on-eject-begin
-const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
+const getCacheIdentifier = require('@duplotech/react-dev-utils/getCacheIdentifier');
 // @remove-on-eject-end
 const postcssNormalize = require('postcss-normalize');
 
@@ -161,7 +161,7 @@ module.exports = function(webpackEnv) {
       // require.resolve('webpack-dev-server/client') + '?/',
       // require.resolve('webpack/hot/dev-server'),
       isEnvDevelopment &&
-        require.resolve('react-dev-utils/webpackHotDevClient'),
+        require.resolve('@duplotech/react-dev-utils/webpackHotDevClient'),
       // Finally, this is your app's code:
       paths.appIndexJs,
       // We include the app code last so that if there is a runtime error during
@@ -402,7 +402,9 @@ module.exports = function(webpackEnv) {
             {
               options: {
                 cache: true,
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                formatter: require.resolve(
+                  '@duplotech/react-dev-utils/eslintFormatter'
+                ),
                 eslintPath: require.resolve('eslint'),
                 resolvePluginsRelativeTo: __dirname,
                 // @remove-on-eject-begin
@@ -410,7 +412,9 @@ module.exports = function(webpackEnv) {
                 baseConfig: isExtendingEslintConfig
                   ? undefined
                   : {
-                      extends: [require.resolve('eslint-config-react-app')],
+                      extends: [
+                        require.resolve('@duplotech/eslint-config-react-app'),
+                      ],
                     },
                 useEslintrc: isExtendingEslintConfig,
                 // @remove-on-eject-end
@@ -444,32 +448,34 @@ module.exports = function(webpackEnv) {
               loader: require.resolve('babel-loader'),
               options: {
                 customize: require.resolve(
-                  'babel-preset-react-app/webpack-overrides'
+                  '@duplotech/babel-preset-react-app/webpack-overrides'
                 ),
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
-                presets: [require.resolve('babel-preset-react-app')],
+                presets: [require.resolve('@duplotech/babel-preset-react-app')],
                 // Make sure we have a unique cache identifier, erring on the
                 // side of caution.
                 // We remove this when the user ejects because the default
                 // is sane and uses Babel options. Instead of options, we use
-                // the react-scripts and babel-preset-react-app versions.
+                // the @duplotech/react-scripts and @duplotech/babel-preset-react-app versions.
                 cacheIdentifier: getCacheIdentifier(
                   isEnvProduction
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
-                    'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
-                    'react-dev-utils',
-                    'react-scripts',
+                    '@duplotech/babel-plugin-named-asset-import',
+                    '@duplotech/babel-preset-react-app',
+                    '@duplotech/react-dev-utils',
+                    '@duplotech/react-scripts',
                   ]
                 ),
                 // @remove-on-eject-end
                 plugins: [
                   [
-                    require.resolve('babel-plugin-named-asset-import'),
+                    require.resolve(
+                      '@duplotech/babel-plugin-named-asset-import'
+                    ),
                     {
                       loaderMap: {
                         svg: {
@@ -501,7 +507,9 @@ module.exports = function(webpackEnv) {
                 compact: false,
                 presets: [
                   [
-                    require.resolve('babel-preset-react-app/dependencies'),
+                    require.resolve(
+                      '@duplotech/babel-preset-react-app/dependencies'
+                    ),
                     { helpers: true },
                   ],
                 ],
@@ -514,10 +522,10 @@ module.exports = function(webpackEnv) {
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
-                    'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
-                    'react-dev-utils',
-                    'react-scripts',
+                    '@duplotech/babel-plugin-named-asset-import',
+                    '@duplotech/babel-preset-react-app',
+                    '@duplotech/react-dev-utils',
+                    '@duplotech/react-scripts',
                   ]
                 ),
                 // @remove-on-eject-end
