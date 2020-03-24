@@ -40,7 +40,10 @@ module.exports = {
                 configFile: false,
                 compact: false,
                 presets: [
-                  ['babel-preset-react-app/dependencies', { helpers: true }],
+                  [
+                    '@duplotech/babel-preset-react-app/dependencies',
+                    { helpers: true },
+                  ],
                 ],
               },
             },

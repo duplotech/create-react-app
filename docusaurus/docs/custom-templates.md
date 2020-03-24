@@ -78,7 +78,10 @@ Below is an example `template.json` file:
       "build-and-serve": "npm run build && npm run serve"
     },
     "eslintConfig": {
-      "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+      "extends": [
+        "@duplotech/eslint-config-react-app",
+        "plugin:jsx-a11y/recommended"
+      ],
       "plugins": ["jsx-a11y"]
     }
   }

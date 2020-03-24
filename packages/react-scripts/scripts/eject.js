@@ -17,11 +17,11 @@ process.on('unhandledRejection', err => {
 const fs = require('fs-extra');
 const path = require('path');
 const execSync = require('child_process').execSync;
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@duplotech/react-dev-utils/chalk');
 const paths = require('../config/paths');
 const createJestConfig = require('./utils/createJestConfig');
-const inquirer = require('react-dev-utils/inquirer');
-const spawnSync = require('react-dev-utils/crossSpawn').sync;
+const inquirer = require('@duplotech/react-dev-utils/inquirer');
+const spawnSync = require('@duplotech/react-dev-utils/crossSpawn').sync;
 const os = require('os');
 
 const green = chalk.green;
@@ -235,14 +235,14 @@ inquirer
     // Add Babel config
     console.log(`  Adding ${cyan('Babel')} preset`);
     appPackage.babel = {
-      presets: ['react-app'],
+      presets: ['@duplotech/babel-preset-react-app'],
     };
 
     // Add ESlint config
     if (!appPackage.eslintConfig) {
       console.log(`  Adding ${cyan('ESLint')} configuration`);
       appPackage.eslintConfig = {
-        extends: 'react-app',
+        extends: '@duplotech/eslint-config-react-app',
       };
     }
 

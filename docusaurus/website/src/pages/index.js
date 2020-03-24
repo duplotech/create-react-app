@@ -92,7 +92,7 @@ function Home() {
                 To create a project called <i>my-app</i>, run this command:
               </p>
               <CodeBlock className="language-sh">
-                npx create-react-app my-app
+                npx @duplotech/create-react-app my-app
               </CodeBlock>
               <br />
             </div>
@@ -126,7 +126,7 @@ function Home() {
                 released, you can upgrade using a single command:
               </p>
               <CodeBlock className="language-sh">
-                npm install react-scripts@latest
+                npm install @duplotech/react-scripts@latest
               </CodeBlock>
             </div>
           </div>

@@ -26,7 +26,7 @@ Then create a file named `.eslintrc.json` with following contents in the root fo
 
 ```json
 {
-  "extends": "react-app"
+  "extends": "@duplotech/eslint-config-react-app"
 }
 ```
 
@@ -59,7 +59,10 @@ If you want to enable even more accessibility rules, you can create an `.eslintr
 
 ```json
 {
-  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "extends": [
+    "@duplotech/eslint-config-react-app",
+    "plugin:jsx-a11y/recommended"
+  ],
   "plugins": ["jsx-a11y"]
 }
 ```

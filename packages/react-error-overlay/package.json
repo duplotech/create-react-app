@@ -1,5 +1,5 @@
 {
-  "name": "react-error-overlay",
+  "name": "@duplotech/react-error-overlay",
   "version": "6.0.7",
   "description": "An overlay for displaying stack frames.",
   "main": "lib/index.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/duplotech/create-react-app.git",
     "directory": "packages/react-error-overlay"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/duplotech/create-react-app/issues"
   },
   "keywords": [
     "overlay",
@@ -40,12 +40,12 @@
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.1.0",
-    "babel-preset-react-app": "^9.1.2",
+    "@duplotech/babel-preset-react-app": "^9.1.2",
     "chalk": "2.4.2",
     "chokidar": "^3.3.0",
     "cross-env": "6.0.3",
     "eslint": "^6.1.0",
-    "eslint-config-react-app": "^5.2.1",
+    "@duplotech/eslint-config-react-app": "^5.2.1",
     "eslint-plugin-flowtype": "4.5.2",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
@@ -58,7 +58,7 @@
     "promise": "8.0.3",
     "raw-loader": "^4.0.0",
     "react": "^16.12.0",
-    "react-app-polyfill": "^1.0.6",
+    "@duplotech/react-app-polyfill": "^1.0.6",
     "react-dom": "^16.12.0",
     "rimraf": "^3.0.0",
     "settle-promise": "1.0.0",

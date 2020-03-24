@@ -16,10 +16,12 @@ process.on('unhandledRejection', err => {
 
 const fs = require('fs-extra');
 const path = require('path');
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@duplotech/react-dev-utils/chalk');
 const execSync = require('child_process').execSync;
-const spawn = require('react-dev-utils/crossSpawn');
-const { defaultBrowsers } = require('react-dev-utils/browsersHelper');
+const spawn = require('@duplotech/react-dev-utils/crossSpawn');
+const {
+  defaultBrowsers,
+} = require('@duplotech/react-dev-utils/browsersHelper');
 const os = require('os');
 const verifyTypeScriptSetup = require('./utils/verifyTypeScriptSetup');
 
@@ -95,12 +97,12 @@ module.exports = function(
     console.log('');
     console.error(
       `A template was not provided. This is likely because you're using an outdated version of ${chalk.cyan(
-        'create-react-app'
+        '@duplotech/create-react-app'
       )}.`
     );
     console.error(
       `Please note that global installs of ${chalk.cyan(
-        'create-react-app'
+        '@duplotech/create-react-app'
       )} are no longer supported.`
     );
     return;

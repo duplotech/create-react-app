@@ -46,7 +46,7 @@ In the below example:
 ```json
 {
   "eslintConfig": {
-    "extends": ["react-app", "shared-config"],
+    "extends": ["@duplotech/eslint-config-react-app", "shared-config"],
     "rules": {
       "additional-rule": "warn"
     },

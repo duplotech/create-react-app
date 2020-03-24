@@ -21,7 +21,7 @@ const siteConfig = {
           path: '../docs',
           sidebarPath: require.resolve('./sidebars.json'),
           editUrl:
-            'https://github.com/facebook/create-react-app/edit/master/docusaurus/website',
+            'https://github.com/duplotech/create-react-app/edit/master/docusaurus/website',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -51,7 +51,7 @@ const siteConfig = {
           position: 'right',
         },
         {
-          href: 'https://www.github.com/facebook/create-react-app',
+          href: 'https://www.github.com/duplotech/create-react-app',
           label: 'GitHub',
           position: 'right',
         },
@@ -101,7 +101,7 @@ const siteConfig = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://www.github.com/facebook/create-react-app',
+              href: 'https://www.github.com/duplotech/create-react-app',
             },
           ],
         },

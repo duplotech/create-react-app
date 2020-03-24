@@ -26,7 +26,7 @@ Then create a file named `.babelrc` with following contents in the root folder o
 
 ```json
 {
-  "presets": ["react-app"]
+  "presets": ["@duplotech/babel-preset-react-app"]
 }
 ```
 
@@ -38,7 +38,9 @@ Make sure you have a `.flowconfig` file at the root directory. You can also use 
 
 ```json
 {
-  "presets": [["react-app", { "flow": true, "typescript": false }]]
+  "presets": [
+    ["@duplotech/babel-preset-react-app", { "flow": true, "typescript": false }]
+  ]
 }
 ```
 
@@ -48,6 +50,8 @@ Make sure you have a `tsconfig.json` file at the root directory. You can also us
 
 ```json
 {
-  "presets": [["react-app", { "flow": false, "typescript": true }]]
+  "presets": [
+    ["@duplotech/babel-preset-react-app", { "flow": false, "typescript": true }]
+  ]
 }
 ```

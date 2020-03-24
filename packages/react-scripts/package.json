@@ -1,10 +1,10 @@
 {
-  "name": "react-scripts",
+  "name": "@duplotech/react-scripts",
   "version": "3.4.1",
   "description": "Configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/duplotech/create-react-app.git",
     "directory": "packages/react-scripts"
   },
   "license": "MIT",
@@ -12,7 +12,7 @@
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/duplotech/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -35,15 +35,15 @@
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.1.0",
-    "babel-plugin-named-asset-import": "^0.3.6",
-    "babel-preset-react-app": "^9.1.2",
+    "@duplotech/babel-plugin-named-asset-import": "^0.3.6",
+    "@duplotech/babel-preset-react-app": "^9.1.2",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.6.0",
-    "eslint-config-react-app": "^5.2.1",
+    "@duplotech/eslint-config-react-app": "^5.2.1",
     "eslint-loader": "3.0.3",
     "eslint-plugin-flowtype": "4.6.0",
     "eslint-plugin-import": "2.20.1",
@@ -68,8 +68,8 @@
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
     "process": "0.11.10",
-    "react-app-polyfill": "^1.0.6",
-    "react-dev-utils": "^10.2.1",
+    "@duplotech/react-app-polyfill": "^1.0.6",
+    "@duplotech/react-dev-utils": "^10.2.1",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",

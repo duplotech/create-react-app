@@ -1,15 +1,15 @@
 {
-  "name": "eslint-config-react-app",
+  "name": "@duplotech/eslint-config-react-app",
   "version": "5.2.1",
   "description": "ESLint configuration used by Create React App",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/duplotech/create-react-app.git",
     "directory": "packages/eslint-config-react-app"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/duplotech/create-react-app/issues"
   },
   "files": [
     "index.js"
@@ -26,6 +26,6 @@
     "eslint-plugin-react-hooks": "1.x || 2.x"
   },
   "dependencies": {
-    "confusing-browser-globals": "^1.0.9"
+    "@duplotech/confusing-browser-globals": "^1.0.9"
   }
 }

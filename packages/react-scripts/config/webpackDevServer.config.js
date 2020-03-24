@@ -9,11 +9,11 @@
 'use strict';
 
 const fs = require('fs');
-const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
-const evalSourceMapMiddleware = require('react-dev-utils/evalSourceMapMiddleware');
-const noopServiceWorkerMiddleware = require('react-dev-utils/noopServiceWorkerMiddleware');
-const ignoredFiles = require('react-dev-utils/ignoredFiles');
-const redirectServedPath = require('react-dev-utils/redirectServedPathMiddleware');
+const errorOverlayMiddleware = require('@duplotech/react-dev-utils/errorOverlayMiddleware');
+const evalSourceMapMiddleware = require('@duplotech/react-dev-utils/evalSourceMapMiddleware');
+const noopServiceWorkerMiddleware = require('@duplotech/react-dev-utils/noopServiceWorkerMiddleware');
+const ignoredFiles = require('@duplotech/react-dev-utils/ignoredFiles');
+const redirectServedPath = require('@duplotech/react-dev-utils/redirectServedPathMiddleware');
 const paths = require('./paths');
 const getHttpsConfig = require('./getHttpsConfig');
 

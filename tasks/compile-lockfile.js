@@ -23,13 +23,14 @@ try {
   // Create an empty package.json that we'll populate
   fse.writeFileSync(path.join(temp, 'package.json'), '{}');
 
-  // Extract the dependencies from react-scripts (which is a workspace)
-  const dependencies = require('react-scripts/package.json').dependencies;
+  // Extract the dependencies from @duplotech/react-scripts (which is a workspace)
+  const dependencies = require('@duplotech/react-scripts/package.json')
+    .dependencies;
   const descriptors = Object.keys(dependencies).map(
     dep => `${dep}@${dependencies[dep]}`
   );
 
-  // Run "yarn add" with all the dependencies of react-scripts
+  // Run "yarn add" with all the dependencies of @duplotech/react-scripts
   cprocess.execFileSync('yarn', ['add', ...descriptors], { cwd: temp });
 
   // Store the generated lockfile in create-react-app
