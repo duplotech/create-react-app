@@ -12,6 +12,7 @@
     "postinstall": "cd packages/react-error-overlay/ && yarn build:prod",
     "publish": "tasks/publish.sh",
     "publish:canary": "tasks/publish.sh --canary --preid=next --dist-tag=latest --force-publish='*'",
+    "publish:all": "tasks/publish.sh --force-publish='*'",
     "start": "cd packages/react-scripts && node bin/react-scripts.js start",
     "screencast": "node ./tasks/screencast.js",
     "screencast:error": "svg-term --cast jyu19xGl88FQ3poMY8Hbmfw8y --out screencast-error.svg --window --at 12000 --no-cursor",
