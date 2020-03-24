@@ -1,6 +1,6 @@
 {
   "name": "@duplotech/react-app-polyfill",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Polyfills for various browsers including commonly used language features",
   "publishConfig": {
     "access": "public"
