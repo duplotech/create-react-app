@@ -2,6 +2,9 @@
   "name": "@duplotech/react-scripts",
   "version": "3.4.1",
   "description": "Configuration and scripts for Create React App.",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/duplotech/create-react-app.git",
