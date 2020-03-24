@@ -2,6 +2,9 @@
   "name": "@duplotech/babel-plugin-named-asset-import",
   "version": "0.3.6",
   "description": "Babel plugin for named asset imports in Create React App",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/duplotech/create-react-app.git",

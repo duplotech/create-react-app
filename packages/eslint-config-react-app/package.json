@@ -2,6 +2,9 @@
   "name": "@duplotech/eslint-config-react-app",
   "version": "5.2.1",
   "description": "ESLint configuration used by Create React App",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/duplotech/create-react-app.git",
