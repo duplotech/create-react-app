@@ -8,6 +8,8 @@
 
 const path = require('path');
 
+const webpack = require('webpack');
+
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/index.js',
@@ -33,6 +35,9 @@ module.exports = {
   resolve: {
     alias: {
       iframeScript$: path.resolve(__dirname, './lib/iframe-bundle.js'),
+      // Webpack 5 Change: Do not polyfill node bindings by default.
+      // See https://github.com/webpack/webpack/pull/8460
+      process: 'process',
     },
   },
   optimization: {
@@ -47,4 +52,9 @@ module.exports = {
   performance: {
     hints: false,
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser.js',
+    }),
+  ],
 };
