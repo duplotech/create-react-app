@@ -197,7 +197,7 @@ module.exports = function(
 
   // Setup the eslint config
   appPackage.eslintConfig = {
-    extends: 'react-app',
+    extends: '@duplotech/eslint-config-react-app',
   };
 
   // Setup the browsers list
