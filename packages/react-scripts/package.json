@@ -1,6 +1,6 @@
 {
   "name": "@duplotech/react-scripts",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "Configuration and scripts for Create React App.",
   "publishConfig": {
     "access": "public"
@@ -32,12 +32,12 @@
   "types": "./lib/react-app.d.ts",
   "dependencies": {
     "@babel/core": "7.9.0",
-    "@duplotech/babel-plugin-named-asset-import": "^0.3.7",
-    "@duplotech/babel-preset-react-app": "^9.1.3",
-    "@duplotech/eslint-config-react-app": "^5.2.2",
+    "@duplotech/babel-plugin-named-asset-import": "^0.3.8",
+    "@duplotech/babel-preset-react-app": "^9.1.4",
+    "@duplotech/eslint-config-react-app": "^5.2.3",
     "@duplotech/html-webpack-plugin": "4.0.1-alpha.2529",
-    "@duplotech/react-app-polyfill": "^1.0.7",
-    "@duplotech/react-dev-utils": "^10.2.2",
+    "@duplotech/react-app-polyfill": "^1.0.8",
+    "@duplotech/react-dev-utils": "^10.2.3",
     "@svgr/webpack": "5.3.0",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
