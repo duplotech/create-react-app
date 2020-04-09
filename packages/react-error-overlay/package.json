@@ -1,6 +1,6 @@
 {
   "name": "@duplotech/react-error-overlay",
-  "version": "6.0.12",
+  "version": "6.0.13",
   "description": "An overlay for displaying stack frames.",
   "main": "lib/index.js",
   "sideEffects": false,
@@ -39,9 +39,9 @@
   "devDependencies": {
     "@babel/code-frame": "7.8.3",
     "@babel/core": "7.9.0",
-    "@duplotech/babel-preset-react-app": "^9.1.7",
-    "@duplotech/eslint-config-react-app": "^5.2.6",
-    "@duplotech/react-app-polyfill": "^1.0.11",
+    "@duplotech/babel-preset-react-app": "^9.1.8",
+    "@duplotech/eslint-config-react-app": "^5.2.7",
+    "@duplotech/react-app-polyfill": "^1.0.12",
     "anser": "1.4.9",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
