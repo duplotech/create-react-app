@@ -1,6 +1,6 @@
 {
   "name": "@duplotech/eslint-config-react-app",
-  "version": "5.2.5",
+  "version": "5.2.6",
   "description": "ESLint configuration used by Create React App",
   "publishConfig": {
     "access": "public"
@@ -29,6 +29,6 @@
     "eslint-plugin-react-hooks": "1.x || 2.x"
   },
   "dependencies": {
-    "@duplotech/confusing-browser-globals": "^1.0.13"
+    "@duplotech/confusing-browser-globals": "^1.0.14"
   }
 }
