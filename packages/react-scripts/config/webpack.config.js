@@ -308,11 +308,52 @@ module.exports = function(webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+
         // Webpack 5 Change: Polyfill Node bindings.
         // See https://github.com/webpack/webpack/pull/8460
+        // See https://github.com/webpack/node-libs-browser/blob/master/index.js
+        assert: 'assert',
+        buffer: 'buffer',
+        child_process: path.resolve(path.join(__dirname, 'mocks/empty')),
+        cluster: path.resolve(path.join(__dirname, 'mocks/empty')),
+        console: 'console-browserify',
+        constants: 'constants-browserify',
+        crypto: 'crypto-browserify',
+        dgram: path.resolve(path.join(__dirname, 'mocks/empty')),
+        // dns: 'mock'
+        // See https://github.com/webpack/node-libs-browser/blob/master/mock/dns.js
+        dns: path.resolve(path.join(__dirname, 'mocks/dns')),
+        domain: 'domain-browser',
+        events: 'events',
+        fs: path.resolve(path.join(__dirname, 'mocks/empty')),
+        http: 'stream-http',
+        http2: path.resolve(path.join(__dirname, 'mocks/empty')),
+        https: 'https-browserify',
+        module: path.resolve(path.join(__dirname, 'mocks/empty')),
+        net: path.resolve(path.join(__dirname, 'mocks/empty')),
+        os: 'os-browserify/browser.js',
         path: 'path-browserify',
-        process: 'process',
+        punycode: 'punycode',
+        process: 'process/browser.js',
+        querystring: 'querystring-es3',
+        readline: path.resolve(path.join(__dirname, 'mocks/empty')),
+        repl: path.resolve(path.join(__dirname, 'mocks/empty')),
+        stream: 'stream-browserify',
+        _stream_duplex: 'readable-stream/duplex.js',
+        _stream_passthrough: 'readable-stream/passthrough.js',
+        _stream_readable: 'readable-stream/readable.js',
+        _stream_transform: 'readable-stream/transform.js',
+        _stream_writable: 'readable-stream/writable.js',
+        string_decoder: 'string_decoder',
+        sys: 'util/util.js',
+        timers: 'timers-browserify',
+        tls: path.resolve(path.join(__dirname, 'mocks/empty')),
+        tty: 'tty-browserify',
         url: 'url',
+        util: 'util/util.js',
+        vm: 'vm-browserify',
+        zlib: 'browserify-zlib',
+
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
@@ -581,6 +622,7 @@ module.exports = function(webpackEnv) {
     plugins: [
       new webpack.ProvidePlugin({
         process: 'process/browser.js',
+        Buffer: ['buffer', 'Buffer'],
       }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
