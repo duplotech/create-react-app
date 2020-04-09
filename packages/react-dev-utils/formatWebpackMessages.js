@@ -22,10 +22,12 @@ function formatMessage(messageOrMessageMetadata) {
   if (typeof messageOrMessageMetadata === 'string') {
     message = messageOrMessageMetadata;
   } else {
-    // Clean up file name
-    moduleName = chalk.inverse(
-      messageOrMessageMetadata.moduleName.replace(/^(.*) \d+:\d+-\d+$/, '$1')
-    );
+    if (messageOrMessageMetadata.moduleName) {
+      // Clean up file name
+      moduleName = chalk.inverse(
+        messageOrMessageMetadata.moduleName.replace(/^(.*) \d+:\d+-\d+$/, '$1')
+      );
+    }
 
     message = messageOrMessageMetadata.message;
   }
