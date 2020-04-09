@@ -630,10 +630,7 @@ module.exports = function(webpackEnv) {
     plugins: [
       new webpack.ProvidePlugin({
         process: 'process/browser.js',
-<<<<<<< HEAD
         Buffer: ['buffer', 'Buffer'],
-=======
->>>>>>> db299da1... Disable Node.js bindings and add aliases to Node.js polyfills
       }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
